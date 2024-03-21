@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lifecycle';
+  inputValue: string;
+
+
+  onBtnClicked(inputValue: HTMLInputElement) {
+    this.inputValue = inputValue.value
+  }
 }

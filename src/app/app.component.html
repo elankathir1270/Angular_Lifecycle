@@ -3,5 +3,8 @@
     <input type="text" #inputEl (focus)="0">
     <button (click)="onBtnClicked(inputEl)" class="btn btn-success m-2">Show</button>
   </div>
-  <app-on-change [message]="inputValue"></app-on-change>
+  <app-on-change [message]="inputValue">
+    <p #contRef>This is from After Content Init</p>
+  </app-on-change>
 </div>
+

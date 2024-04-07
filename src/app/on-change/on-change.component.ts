@@ -26,6 +26,10 @@ export class OnChangeComponent {
     console.log("ngOnInit called");
     //console.log(this.tempPara.nativeElement.innerHTML);
 
+  }
+
+  ngDoCheck() {
+    console.log("ngDoCheck called");
 
   }
 

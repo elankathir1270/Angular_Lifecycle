@@ -1,6 +1,6 @@
 <div class="container">
   <div>
-    <input type="text" #inputEl>
+    <input type="text" #inputEl (focus)="0">
     <button (click)="onBtnClicked(inputEl)" class="btn btn-success m-2">Show</button>
   </div>
   <app-on-change [message]="inputValue"></app-on-change>

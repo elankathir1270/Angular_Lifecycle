@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, SimpleChange, ViewChild } from '@angular/core';
+import { Component, ContentChild, ElementRef, Input, SimpleChange, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-on-change',
@@ -9,6 +9,7 @@ export class OnChangeComponent {
 
   @Input() message: string;
   @ViewChild('temp') tempPara: ElementRef;
+  @ContentChild('contRef') contPara: ElementRef
 
   constructor() {
     console.log("constructor is called");
@@ -30,7 +31,12 @@ export class OnChangeComponent {
 
   ngDoCheck() {
     console.log("ngDoCheck called");
+    console.log("from DoCheck " + this.contPara);
+  }
 
+  ngAfterContentInit() {
+    console.log("ngAfterContentInit called");
+    console.log("from AfterContInit " + this.contPara.nativeElement);
   }
 
 }
